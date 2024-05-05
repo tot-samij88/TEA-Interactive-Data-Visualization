@@ -1,14 +1,14 @@
 {
-  "name": "Interactive Data Visualization", // название проекта
+  "name": "Interactive Data Visualization",
   "version": "1.0.0", 
-  "description": "Interactive Data Visualization: Build a library for creating interactive and visually appealing charts and graphs using SVG or canvas. Include features like tooltips, zooming, panning, and animations to make data exploration more engaging.", // описание проекта
+  "description": "Interactive Data Visualization: Build a library for creating interactive and visually appealing charts and graphs using SVG or canvas. Include features like tooltips, zooming, panning, and animations to make data exploration more engaging.", 
   "main": "./src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "" // репозиторий (заполним чуть позже)
+    "url": "https://github.com/tot-samij88/TEA-Interactive-Data-Visualization"
   },
   "keywords": [ 
     "Interactive Data Visualization", 
