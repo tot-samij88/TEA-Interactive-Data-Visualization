@@ -1,6 +1,6 @@
 {
   "name": "iteractive_data_visualization",
-  "version": "1.0.0", 
+  "version": "1.0.1", 
   "description": "Interactive Data Visualization: Build a library for creating interactive and visually appealing charts and graphs using SVG or canvas. Include features like tooltips, zooming, panning, and animations to make data exploration more engaging.", 
   "main": "./src/index.js",
   "scripts": {
