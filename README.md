@@ -1,64 +1,42 @@
-# PDF Generator
+# Interactive Data Visualization
 
-A simple yet powerful PDF generation tool written in TypeScript.
+This npm package provides a simple yet powerful tool for creating interactive data visualizations in JavaScript using D3.js.
 
 ## Installation
 
+You can install the package via npm:
+
 ```bash
-npm install pdf-generator
-```
+npm install interactive-data-visualization
 
-## Usage
 
-```javascript
-const PDFGenerator = require("pdf-generator");
+// Import the Visualization class
+const Visualization = require('interactive-data-visualization');
 
-// Create a new PDFGenerator instance
-const pdfGenerator = new PDFGenerator();
+// Sample data
+const data = [
+    { x: 50, y: 50, radius: 10, color: 'blue', label: 'Point 1' },
+    { x: 100, y: 100, radius: 15, color: 'red', label: 'Point 2' },
+    { x: 150, y: 150, radius: 20, color: 'green', label: 'Point 3' }
+];
 
-// Add content to the PDF
-pdfGenerator
-  .addText("Hello, this is a PDF generated using PDFGenerator!", {
-    fontSize: 20,
-    align: "center",
-  })
-  .addPage()
-  .addText("This is page 2 of the PDF.", {
-    y: 100,
-    align: "center",
-  });
+// Visualization options
+const options = {
+    container: '#visualization-container',
+    width: 300,
+    height: 300
+};
 
-// Save the PDF
-pdfGenerator.save();
-```
+// Instantiate the Visualization class
+const viz = new Visualization(data, options);
 
-## API
 
-### `PDFGenerator(options?: PDFGeneratorOptions)`
+API
+new Visualization(data, options)
+Creates a new instance of the Visualization class.
 
-Creates a new instance of PDFGenerator with optional options.
+data: An array of objects representing data points. Each object should have x, y, radius, color, and label properties.
+options: An object specifying configuration options for the visualization. It should contain container, width, and height properties.
 
-- `options.filename`: Specify the filename for the generated PDF. Default is `'output.pdf'`.
-
-### `addText(text: string, options?: TextOptions): PDFGenerator`
-
-Adds text to the PDF document.
-
-- `text`: The text content to add.
-- `options`: Optional parameters for text formatting, such as fontSize, font, alignment, etc.
-
-### `addPage(): PDFGenerator`
-
-Adds a new page to the PDF document.
-
-### `save(): void`
-
-Saves the PDF document to the specified filename.
-
-## Example
-
-Check the `example` directory for an example usage of the PDFGenerator.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
